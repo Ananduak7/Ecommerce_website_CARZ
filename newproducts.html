@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta nae="viewport" content="width-device-width, initial -scale=1.0">
+   <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>ALL PRODUCTS - CARZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+
+
+<div class="container">
+<body>
+    <div class="navbar">
+       <a href="index.html"> <div class="logo"> </a>
+            <img src="LLLL.webp" width="125px" >
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li> <a href="index.html"> HOME</a></li>
+                <li> <a href="products.html"> PRODUCTS</a></li>
+                <li> <a href="About.html"> ABOUT</a></li>
+                <li> <a href=""> CONTACT</a></li>
+                <li> <a href="account.html"> ACCOUNT</a></li>
+
+            </ul>
+        </nav>
+      <a href="cart.html"> <img src="360_F_32918039_xh9PiM97ZfwFffz8oJhgNtpEVca220tq.jpg" width="75px" height="75px"> </a>
+       <img src="menu.png" class="menu-icon"
+       onclick="menutoggle()">
+    </div>
+
+<!-- Featured product-->
+<div class="small-container"> 
+<div class="row row-2">
+<h2> ALL PRODUCTS</h2>
+<select>
+    <option> Default Sorting</option>
+    <option> Short by price</option>
+    <option>Short by popularity</option>
+    <option> Sort by rating</option>
+    <option> Sort by sale</option>
+</select>
+</div>
+<div class="row">
+<div class="col-4">
+<img src="a6-exterior-right-front-three-quarter-2.webp">
+<h4>AUDI A6 SEDAN  </h4>
+<div class="rating">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-o"></i>
+</div>
+<P>₹ 62.43 Lakhs </P>
+<button class="add-to-cart-btn" onclick="addToCart('AUDI A6 SEDAN', 6243000)">Add to Cart</button>
+
+
+</div>
+<div class="row">
+    <div class="col-4">
+    <img src="BENZFEATURED.webp">
+    <h4>Mercedes-Benz EQS </h4>
+    <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+    </div>
+    <P>₹ 1.62 Cr </P>
+    <button class="add-to-cart-btn" onclick="addToCart('Mercedes-Benz EQS', 16200000)">Add to Cart</button>
+    
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+    <img src="RRFEATURES.webp">
+    <h4>Rolls-Royce Cullinan</h4>
+    <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-o"></i>
+        <i class="fa fa-star"></i>
+    </div>
+    <P>₹.6.95 Cr </P>
+    <button class="add-to-cart-btn" onclick="addToCart('Rolls-Royce Cullinan', 69530000)">Add to Cart</button>
+    
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+    <img src="jaguar featureed.webp">
+    <h4>Jaguar I-Pace </h4>
+    <div class="rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+    </div>
+    <P>₹.1.26 Cr</P>
+    <button class="add-to-cart-btn" onclick="addToCart('Jaguar I-Pace', 12600000)">Add to Cart</button>
+    
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+        <img src="defender-exterior-left-front-three-quarter.webp">
+        <h4>Land Rover Defender </h4>
+        <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <P>	₹ 2.30 Crore </P>
+        <button class="add-to-cart-btn" onclick="addToCart('Land Rover Defender', 23000000)">Add to Cart</button>
+        
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-4">
+        <img src="BMW LATEST.webp">
+        <h4>BMW 7 Series</h4>
+        <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <P>₹ 1.84 Crore </P>
+        
+        <button class="add-to-cart-btn" onclick="addToCart('BMW 7 Series', 18400000)">Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-4">
+        <img src="land-cruiser-exterior-right-front-three-quarter-2.webp">
+        <h4>Toyota Land Cruiser </h4>
+        <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <P>₹ 2.10 Crore</P>
+        <button class="add-to-cart-btn" onclick="addToCart('Toyota Land Cruiser ', 21000000)">Add to Cart</button>
+        
+        </div>
+    </div>
+    <br>
+    <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8595;</span>
+    </div>
+
+
+</div>
+
+<!-- oFFER-->
+<div class="offer"> 
+<div class="small-container">
+    <div class="row">
+        <div class="col-2">
+<img src="lamborgini.webp" class="offer-img">
+        </div>
+        <div class="col-2">
+            <p>Exclusivley Available on CARZ..</p>
+            <h1>LAMBORGHINI REVUELTO </h1>
+            <small>The Revuelto is the beginning of a new era for Lamborghini, who has harnessed the power of hybridization technology to create the first HPEV (High Performance Electrified Vehicle). 
+                Responding to the need for sustainability and powerful performance, the Lamborghini Revuelto rewrites all paradigms and represents a technical masterpiece beyond anyone’s imagination. 
+                The iconic V12 engine finds a new life in this futuristic automotive masterwork that delivers unparalleled performance and driving emotions.
+
+            </small>
+            <a href="" class="btn">BUY NOW &#8594; </a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+    var MenuItems=document.getElementById("MenuItems");
+ MenuItems.style.maxHeight="0px";
+function menutoggle(){
+if(MenuItems.style.maxHeight=="0px"){
+MenuItems.style.maxHeight="200px";
+}
+else{
+MenuItems.style.maxHeight="0px";
+}
+}
+
+</script>
+<script>
+    // Sample cart array to store selected products
+    var cart = [];
+
+    function addToCart(productName, price) {
+        // Add the selected product to the cart array
+        cart.push({ name: productName, price: price });
+        // You can add additional logic here, such as updating the UI to show the product is added
+        alert(productName + ' added to cart!');
+    }
+</script>
+
+
+
+</body>
+
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row" >
+    <div class="footer-col-1">
+    <h3> Download our App </h3>
+    <p>App on all versions available</p>
+    <div class="app-logo"> 
+    
+        <img src="gplay.png">
+        <img src="ios store.jpg">
+    </div>
+    </div>
+    
+    <div class="footer-col-2">
+        <img src="nlogo.jpg" alt="">
+        <p>We provide all high end model Luxuary cars on your request</p>
+    </div>
+    
+    <div class="footer-col-3">
+        <h3> Useful Links</h3>
+        <ul>
+    <li> Coupons</li>
+    <li>Blog Post</li>
+    <li>Return Policy</li>
+    <li>Join Affiliate</li>
+    
+    
+    
+        </ul>
+        </div>
+    
+        <div class="footer-col-1">
+            <h3>Follow us on</h3>
+            <ul>
+        <li> Facebook</li>
+        <li>Twitter</li>
+        <li>Instagram</li>
+        <li>Youtube</li>
+            </ul>
+            </div>
+    
+    </div>
+    <hr> 
+    <p class="copyright"> Copyright 2024 - CARZ</p>
+    </div>
+
+    
+    </div>
+</html>

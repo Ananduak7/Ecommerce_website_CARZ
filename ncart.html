@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART - CARZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="LLLL.webp" width="125px">
+                </div>
+            </a>
+            <nav>
+                <ul id="MenuItems">
+                    <li> <a href="index.html"> HOME</a></li>
+                    <li> <a href="newproducts.html"> PRODUCTS</a></li>
+                    <li> <a href="About.html"> ABOUT</a></li>
+                    <li> <a href=""> CONTACT</a></li>
+                    <li> <a href="ncart.html"> CART</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="360_F_32918039_xh9PiM97ZfwFffz8oJhgNtpEVca220tq.jpg" width="75px" height="75px">
+            </a>
+            <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!-- CART ITEM DETAILS-->
+    <div class="small-container cart-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Action</th>
+            </tr>
+            <!-- Display cart items dynamically -->
+            <script>
+                // Function to display cart items dynamically
+                function displayCart() {
+                    var cartTable = document.querySelector('.cart-page table');
+                    cartTable.innerHTML = ''; // Clear existing content
+
+                    for (var i = 0; i < cart.length; i++) {
+                        var cartItem = cart[i];
+                        var row = cartTable.insertRow(-1);
+
+                        var cell1 = row.insertCell(0);
+                        cell1.innerHTML = cartItem.name;
+
+                        var cell2 = row.insertCell(1);
+                        cell2.innerHTML = '<input type="number" value="1">';
+
+                        var cell3 = row.insertCell(2);
+                        cell3.innerHTML = cartItem.price;
+
+                        var cell4 = row.insertCell(3);
+                        cell4.innerHTML = '<button onclick="removeFromCart(' + i + ')">Remove</button>';
+                    }
+                }
+
+                // Call the displayCart function on page load
+                displayCart();
+
+                // Function to remove item from cart
+                function removeFromCart(index) {
+                    cart.splice(index, 1);
+                    displayCart(); // Update the cart display
+                }
+            </script>
+        </table>
+    </div>
+
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td id="subtotal">₹ 0</td>
+            </tr>
+            <tr>
+                <td>TAX</td>
+                <td id="tax">₹ 0</td>
+            </tr>
+            <tr>
+                <td>TOTAL</td>
+                <td id="total">₹ 0</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        // Sample cart array to store selected products
+        var cart = [];
+
+        function addToCart(productName, price) {
+            // Add the selected product to the cart array
+            cart.push({ name: productName, price: price });
+            // You can add additional logic here, such as updating the UI to show the product is added
+            alert(productName + ' added to cart!');
+            displayCart(); // Update the cart display
+        }
+    </script>
+</body>
+
+<!-- Footer Section -->
+<div class="footer">
+    <div class="container">
+        <!-- ... (existing footer content) ... -->
+    </div>
+</div>
+
+</html>
+
+
+
+<!-- Footer Section -->
+<div class="footer">
+    <div class="container">
+        <div class="row" >
+    <div class="footer-col-1">
+    <h3> Download our App </h3>
+    <p>App on all versions available</p>
+    <div class="app-logo"> 
+    
+        <img src="gplay.png">
+        <img src="ios store.jpg">
+    </div>
+    </div>
+    
+    <div class="footer-col-2">
+        <img src="nlogo.jpg" alt="">
+        <p>We provide all high end model Luxuary cars on your request</p>
+    </div>
+    
+    <div class="footer-col-3">
+        <h3> Useful Links</h3>
+        <ul>
+    <li> Coupons</li>
+    <li>Blog Post</li>
+    <li>Return Policy</li>
+    <li>Join Affiliate</li>
+    
+    
+    
+        </ul>
+        </div>
+    
+        <div class="footer-col-1">
+            <h3>Follow us on</h3>
+            <ul>
+        <li> Facebook</li>
+        <li>Twitter</li>
+        <li>Instagram</li>
+        <li>Youtube</li>
+            </ul>
+            </div>
+    
+    </div>
+    <hr> 
+    <p class="copyright"> Copyright 2024 - CARZ</p>
+    </div>
+
+    
+    </div>
+
+</html>
